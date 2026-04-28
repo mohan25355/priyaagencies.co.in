@@ -1,11 +1,11 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office Address",
-    details: ["123, Solar Park Road, Sector 62,", "Noida, Uttar Pradesh - 201301"],
+    details: ["No 40 Shanmuga Perumaal Kovil street Keelpermbakkam Villupuram."],
     action: "https://maps.google.com",
   },
   {
@@ -35,7 +35,6 @@ const contactInfo = [
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -50,18 +49,33 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. Our team will reach out within 24 hours.",
-      });
+
+    try {
+      await emailjs.send(
+        "service_ar6is0n",
+        "template_x3h088v",
+        {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          city: formData.city,
+          requirement: formData.requirement,
+          message: formData.message,
+        },
+        "6t2M-i1GbmK_K2NQJ"
+      );
+
+      alert("Message sent successfully!");
       setFormData({ name: "", phone: "", email: "", city: "", requirement: "", message: "" });
-    }, 1500);
+    } catch (error) {
+      console.error("EmailJS send failed:", error);
+      alert("Failed to send message");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -222,7 +236,7 @@ const Contact = () => {
 
               <div className="bg-card rounded-2xl border border-border overflow-hidden h-96 lg:h-[calc(100%-160px)]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0677754847037!2d77.36493431508209!3d28.626946982420917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff5e0e0f0f5%3A0x0!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12848.614149822995!2d79.49558023301545!3d11.948417362489822!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5356c3443ed12d%3A0x86e2f3da4987b096!2sKeezperum%20Pakkam%2C%20Viluppuram%2C%20Tamil%20Nadu!5e1!3m2!1sen!2sin!4v1777381365793!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
