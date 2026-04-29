@@ -102,8 +102,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-background/80 text-sm">
-                  123, Solar Park Road, Sector 62,<br />
-                  Noida, Uttar Pradesh - 201301
+                  No 40 ,Shanmuga Perumaal Kovil street Keelpermbakkam Villupuram.
                 </span>
               </li>
               <li className="flex items-center gap-3">
