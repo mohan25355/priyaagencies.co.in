@@ -33,7 +33,9 @@ const galleryItems = [
     { id: 10, category: "Residential", image:  "./img/img 008.jpeg", title: "", description: "" }, 
     { id: 10, category: "Residential", image:  "./img/img 009.jpeg", title: "", description: "" }, 
     { id: 10, category: "Residential", image:  "./img/img 0010.jpeg", title: "", description: "" }, 
- 
+     { id: 10, category: "Commercial", image:  "./img/img 0011.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Commercial", image:  "./img/img 0012.jpeg", title: "", description: "" }, 
+
 
 
 ];
