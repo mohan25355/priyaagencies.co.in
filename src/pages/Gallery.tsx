@@ -23,6 +23,18 @@ const galleryItems = [
     { id: 8, category: "Commercial", image:  "./img/img7.jpeg", title: "", description: "" }, 
       { id: 9, category: "Commercial", image:  "./img/img8.jpeg", title: "", description: "" }, 
         { id: 10, category: "Commercial", image:  "./img/img9.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 001.jpeg", title: "", description: "" }, 
+      { id: 10, category: "Residential", image:  "./img/img 002.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 003.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 004.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 005.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 006.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 007.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 008.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 009.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Residential", image:  "./img/img 0010.jpeg", title: "", description: "" }, 
+ 
+
 
 ];
 
