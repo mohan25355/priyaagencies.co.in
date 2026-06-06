@@ -34,7 +34,15 @@ const galleryItems = [
     { id: 10, category: "Residential", image:  "./img/img 009.jpeg", title: "", description: "" }, 
     { id: 10, category: "Residential", image:  "./img/img 0010.jpeg", title: "", description: "" }, 
      { id: 10, category: "Commercial", image:  "./img/img 0011.jpeg", title: "", description: "" }, 
-    { id: 10, category: "Commercial", image:  "./img/img 0012.jpeg", title: "", description: "" }, 
+    { id: 10, category: "Commercial", image:  "./img/img 0012.jpeg", title: "", description: "" },
+    { id: 4, category: "Commercial", image: "./img/ev.jpeg", title: "", description: "" },
+      { id: 4, category: "Commercial", image: "./img/hybrid.jpeg", title: "", description: "" },
+      { id: 4, category: "Commercial", image: "./img/light.jpeg", title: "", description: "" },
+    { id: 4, category: "Commercial", image: "./img/off.jpeg", title: "", description: "" },
+    { id: 4, category: "Commercial", image: "./img/on.jpeg", title: "", description: "" },
+    { id: 4, category: "Commercial", image: "./img/pump.jpeg", title: "", description: "" },
+    { id: 4, category: "Commercial", image: "./img/res.jpeg", title: "", description: "" },
+
 
 
 
