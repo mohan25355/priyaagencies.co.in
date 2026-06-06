@@ -21,8 +21,6 @@ const galleryItems = [
   { id: 6, category: "Commercial", image:  "./img/img5.jpeg", title: "", description: "" },
   { id: 7, category: "Commercial", image:  "./img/img6.jpeg", title: "", description: "" }, 
     { id: 8, category: "Commercial", image:  "./img/img7.jpeg", title: "", description: "" }, 
-      { id: 9, category: "Commercial", image:  "./img/img8.jpeg", title: "", description: "" }, 
-        { id: 10, category: "Commercial", image:  "./img/img9.jpeg", title: "", description: "" }, 
     { id: 10, category: "Residential", image:  "./img/img 001.jpeg", title: "", description: "" }, 
       { id: 10, category: "Residential", image:  "./img/img 002.jpeg", title: "", description: "" }, 
     { id: 10, category: "Residential", image:  "./img/img 003.jpeg", title: "", description: "" }, 
