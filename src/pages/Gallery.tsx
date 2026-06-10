@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { CTASection } from "@/components/home/CTASection";
 import { cn } from "@/lib/utils";
 
+// Statically imported assets
 import commercialSolar from "@/assets/commercial-solar.jpg";
 import residentialSolar from "@/assets/residential-solar.jpg";
 import installationTeam from "@/assets/installation-team.jpg";
@@ -11,43 +12,51 @@ import solarWaterHeater from "@/assets/solar-water-heater.jpg";
 import solarStreetLight from "@/assets/solar-street-light.jpg";
 import heroSolar from "@/assets/hero-solar.jpg";
 
+// Explicit structure definition to satisfy TypeScript
+interface GalleryItem {
+  id: number;
+  category: string;
+  image: string;
+  title?: string;
+  description?: string;
+}
+
 const categories = ["All", "Residential", "Commercial", "Industrial"];
 
-const galleryItems = [
-  { id: 1, category: "Residential", image: residentialSolar },
-  { id: 2, category: "Industrial", image: commercialSolar, title:"" , description: "" },
-  { id: 3, category: "Residential", image: installationTeam, title: "", description: "" },
-  { id: 4, category: "Commercial", image: solarWaterHeater, title: "", description: "" },
-  { id: 5, category: "Commercial", image:  solarStreetLight, title: "", description: "" },
-  { id: 6, category: "Commercial", image:  heroSolar, title: "", description: "" },
-  { id: 7, category: "Commercial", image:  "./img/img5.jpeg", title: "", description: "" }, 
-  { id: 8, category: "Commercial", image:  "./img/img6.jpeg", title: "", description: "" },
-  { id: 8, category: "Commercial", image:  "./img/img7.jpeg", title: "", description: "" },
-  { id: 9, category: "Residential", image:  "./img/img 001.jpeg", title: "", description: "" }, 
-  { id: 10, category: "Residential", image:  "./img/img 002.jpeg", title: "", description: "" }, 
-  { id: 11, category: "Residential", image:  "./img/img 003.jpeg", title: "", description: "" }, 
-  { id: 12, category: "Residential", image:  "./img/img 004.jpeg", title: "", description: "" }, 
-  { id: 13, category: "Residential", image:  "./img/img 005.jpeg", title: "", description: "" }, 
-  { id: 14, category: "Residential", image:  "./img/img 006.jpeg", title: "", description: "" }, 
-  { id: 15, category: "Residential", image:  "./img/img 007.jpeg", title: "", description: "" }, 
-  { id: 16, category: "Residential", image:  "./img/img 008.jpeg", title: "", description: "" }, 
-  { id: 17, category: "Residential", image:  "./img/img 009.jpeg", title: "", description: "" }, 
-  { id: 18, category: "Residential", image:  "./img/img 0010.jpeg", title: "", description: "" }, 
-  { id: 19, category: "Commercial", image:  "./img/img 0011.jpeg", title: "", description: "" }, 
-  { id: 20, category: "Commercial", image:  "./img/img 0012.jpeg", title: "", description: "" },
-  { id: 21, category: "Commercial", image: "./img/ev.jpeg", title: "", description: "" },
-  { id: 22, category: "Commercial", image: "./img/hybrid.jpeg", title: "", description: "" },
-  { id: 23, category: "Commercial", image: "./img/light.jpeg", title: "", description: "" },
-  { id: 24, category: "Commercial", image: "./img/off.jpeg", title: "", description: "" },
-  { id: 25, category: "Commercial", image: "./img/on.jpeg", title: "", description: "" },
-  { id: 26, category: "Commercial", image: "./img/pump.jpeg", title: "", description: "" },
-  { id: 27, category: "Commercial", image: "./img/res.jpeg", title: "", description: "" },
-
+const galleryItems: GalleryItem[] = [
+  { id: 1, category: "Residential", image: residentialSolar, title: "Residential Setup", description: "Rooftop solar installation" },
+  { id: 2, category: "Industrial", image: commercialSolar, title: "Industrial Plant", description: "Large scale deployment" },
+  { id: 3, category: "Residential", image: installationTeam, title: "Our Experts", description: "On-site professional execution" },
+  { id: 4, category: "Commercial", image: solarWaterHeater, title: "Solar Heating", description: "Commercial water heating units" },
+  { id: 5, category: "Commercial", image: solarStreetLight, title: "Street Lighting", description: "Eco-friendly infrastructure solutions" },
+  { id: 6, category: "Commercial", image: heroSolar, title: "Solar Overview", description: "High-efficiency panels grid" },
+  { id: 7, category: "Commercial", image: "/img/img5.jpeg", title: "", description: "" }, 
+  { id: 8, category: "Commercial", image: "/img/img6.jpeg", title: "", description: "" },
+  { id: 9, category: "Commercial", image: "/img/img7.jpeg", title: "", description: "" }, // Fixed duplicate ID 8 -> 9
+  { id: 10, category: "Residential", image: "/img/img 001.jpeg", title: "", description: "" }, // Re-indexed remaining IDs
+  { id: 11, category: "Residential", image: "/img/img 002.jpeg", title: "", description: "" }, 
+  { id: 12, category: "Residential", image: "/img/img 003.jpeg", title: "", description: "" }, 
+  { id: 13, category: "Residential", image: "/img/img 004.jpeg", title: "", description: "" }, 
+  { id: 14, category: "Residential", image: "/img/img 005.jpeg", title: "", description: "" }, 
+  { id: 15, category: "Residential", image: "/img/img 006.jpeg", title: "", description: "" }, 
+  { id: 16, category: "Residential", image: "/img/img 007.jpeg", title: "", description: "" }, 
+  { id: 17, category: "Residential", image: "/img/img 008.jpeg", title: "", description: "" }, 
+  { id: 18, category: "Residential", image: "/img/img 009.jpeg", title: "", description: "" }, 
+  { id: 19, category: "Residential", image: "/img/img 0010.jpeg", title: "", description: "" }, 
+  { id: 20, category: "Commercial", image: "/img/img 0011.jpeg", title: "", description: "" }, 
+  { id: 21, category: "Commercial", image: "/img/img 0012.jpeg", title: "", description: "" },
+  { id: 22, category: "Commercial", image: "/img/ev.jpeg", title: "", description: "" },
+  { id: 23, category: "Commercial", image: "/img/hybrid.jpeg", title: "", description: "" },
+  { id: 24, category: "Commercial", image: "/img/light.jpeg", title: "", description: "" },
+  { id: 25, category: "Commercial", image: "/img/off.jpeg", title: "", description: "" },
+  { id: 26, category: "Commercial", image: "/img/on.jpeg", title: "", description: "" },
+  { id: 27, category: "Commercial", image: "/img/pump.jpeg", title: "", description: "" },
+  { id: 28, category: "Commercial", image: "/img/res.jpeg", title: "", description: "" },
 ];
 
 const Gallery = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<typeof galleryItems[0] | null>(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
   const filteredItems = activeCategory === "All"
     ? galleryItems
@@ -72,6 +81,7 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+
       {/* Gallery Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -103,7 +113,7 @@ const Gallery = () => {
               >
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={item.title || "Solar Project"}
                   className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -134,17 +144,19 @@ const Gallery = () => {
           <div className="relative max-w-4xl w-full">
             <img
               src={selectedImage.image}
-              alt={selectedImage.title}
+              alt={selectedImage.title || "Selected Solar Project"}
               className="w-full rounded-lg"
             />
-            <div className="mt-4 text-center">
-              <h4 className="font-heading text-xl font-semibold text-background">
-                {selectedImage.title}
-              </h4>
-              <p className="text-background/80">
-                {selectedImage.description}
-              </p>
-            </div>
+            {(selectedImage.title || selectedImage.description) && (
+              <div className="mt-4 text-center">
+                <h4 className="font-heading text-xl font-semibold text-background">
+                  {selectedImage.title}
+                </h4>
+                <p className="text-background/80">
+                  {selectedImage.description}
+                </p>
+              </div>
+            )}
             <button
               className="absolute -top-12 right-0 text-background text-3xl hover:text-primary transition-colors"
               onClick={() => setSelectedImage(null)}
