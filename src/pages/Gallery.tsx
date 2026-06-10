@@ -3,22 +3,23 @@ import { Layout } from "@/components/layout/Layout";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CTASection } from "@/components/home/CTASection";
 import { cn } from "@/lib/utils";
-import heroSolar from "@/assets/hero-solar.jpg";
+
 import commercialSolar from "@/assets/commercial-solar.jpg";
 import residentialSolar from "@/assets/residential-solar.jpg";
 import installationTeam from "@/assets/installation-team.jpg";
 import solarWaterHeater from "@/assets/solar-water-heater.jpg";
 import solarStreetLight from "@/assets/solar-street-light.jpg";
+import heroSolar from "@/assets/hero-solar.jpg";
 
 const categories = ["All", "Residential", "Commercial", "Industrial"];
 
 const galleryItems = [
   { id: 1, category: "Residential", image: residentialSolar },
   { id: 2, category: "Industrial", image: commercialSolar, title:"" , description: "" },
-  { id: 3, category: "Residential", image: "./img/img1.jpeg", title: "", description: "" },
-  { id: 4, category: "Commercial", image: "./img/img2.jpeg", title: "", description: "" },
-  { id: 5, category: "Commercial", image:  "./img/img3.jpeg", title: "", description: "" },
-  { id: 6, category: "Commercial", image:  "./img/img4.jpeg", title: "", description: "" },
+  { id: 3, category: "Residential", image: installationTeam, title: "", description: "" },
+  { id: 4, category: "Commercial", image: solarWaterHeater, title: "", description: "" },
+  { id: 5, category: "Commercial", image:  solarStreetLight, title: "", description: "" },
+  { id: 6, category: "Commercial", image:  heroSolar, title: "", description: "" },
   { id: 7, category: "Commercial", image:  "./img/img5.jpeg", title: "", description: "" }, 
   { id: 8, category: "Commercial", image:  "./img/img6.jpeg", title: "", description: "" },
   { id: 8, category: "Commercial", image:  "./img/img7.jpeg", title: "", description: "" },
@@ -71,7 +72,6 @@ const Gallery = () => {
           </div>
         </div>
       </section>
-
       {/* Gallery Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
