@@ -5,12 +5,9 @@ import { CTASection } from "@/components/home/CTASection";
 import { cn } from "@/lib/utils";
 
 // Statically imported assets
-import commercialSolar from "@/assets/commercial-solar.jpg";
-import residentialSolar from "@/assets/residential-solar.jpg";
-import installationTeam from "@/assets/installation-team.jpg";
-import solarWaterHeater from "@/assets/solar-water-heater.jpg";
-import solarStreetLight from "@/assets/solar-street-light.jpg";
-import heroSolar from "@/assets/hero-solar.jpg";
+
+
+
 
 // Explicit structure definition to satisfy TypeScript
 interface GalleryItem {
@@ -21,15 +18,13 @@ interface GalleryItem {
   description?: string;
 }
 
-const categories = ["All", "Residential", "Commercial", "Industrial"];
+const categories = ["All", "Residential", "Industrial"];
 
 const galleryItems: GalleryItem[] = [
-  { id: 1, category: "Residential", image: residentialSolar, title: "Residential Setup", description: "Rooftop solar installation" },
-  { id: 2, category: "Industrial", image: commercialSolar, title: "Industrial Plant", description: "Large scale deployment" },
-  { id: 3, category: "Residential", image: installationTeam, title: "Our Experts", description: "On-site professional execution" },
-  { id: 4, category: "Commercial", image: solarWaterHeater, title: "Solar Heating", description: "Commercial water heating units" },
-  { id: 5, category: "Commercial", image: solarStreetLight, title: "Street Lighting", description: "Eco-friendly infrastructure solutions" },
-  { id: 6, category: "Commercial", image: heroSolar, title: "Solar Overview", description: "High-efficiency panels grid" },
+
+  
+  
+
   { id: 7, category: "Commercial", image: "/img/img5.jpeg", title: "", description: "" }, 
   { id: 8, category: "Commercial", image: "/img/img6.jpeg", title: "", description: "" },
   { id: 9, category: "Commercial", image: "/img/img7.jpeg", title: "", description: "" }, // Fixed duplicate ID 8 -> 9
@@ -45,13 +40,8 @@ const galleryItems: GalleryItem[] = [
   { id: 19, category: "Residential", image: "/img/img 0010.jpeg", title: "", description: "" }, 
   { id: 20, category: "Commercial", image: "/img/img 0011.jpeg", title: "", description: "" }, 
   { id: 21, category: "Commercial", image: "/img/img 0012.jpeg", title: "", description: "" },
-  { id: 22, category: "Commercial", image: "/img/ev.jpeg", title: "", description: "" },
-  { id: 23, category: "Commercial", image: "/img/hybrid.jpeg", title: "", description: "" },
-  { id: 24, category: "Commercial", image: "/img/light.jpeg", title: "", description: "" },
-  { id: 25, category: "Commercial", image: "/img/off.jpeg", title: "", description: "" },
-  { id: 26, category: "Commercial", image: "/img/on.jpeg", title: "", description: "" },
-  { id: 27, category: "Commercial", image: "/img/pump.jpeg", title: "", description: "" },
-  { id: 28, category: "Commercial", image: "/img/res.jpeg", title: "", description: "" },
+
+
 ];
 
 const Gallery = () => {
